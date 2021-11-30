@@ -4,6 +4,9 @@ from scrapy.http import FormRequest
 from scrapy.utils.response import open_in_browser
 from caqh.items import DataSummary
 
+f = open('MY_ACCOUNTS.json')
+MY_ACCOUNTS_list = json.load(f)
+
 
 class DataSummarySpider(scrapy.Spider):
     name = 'datasummary'
@@ -14,8 +17,8 @@ class DataSummarySpider(scrapy.Spider):
         request_list = []
 
         # Load accounts
-        MY_ACCOUNTS_FILE = open(self.crawler.settings['MY_ACCOUNTS_FILE'])
-        MY_ACCOUNTS_list = json.load(MY_ACCOUNTS_FILE)
+        #MY_ACCOUNTS_FILE = open(self.crawler.settings['MY_ACCOUNTS_FILE'])
+        #MY_ACCOUNTS_list = json.load(MY_ACCOUNTS_FILE)
 
         for i, account_data in enumerate(MY_ACCOUNTS_list):
             request = scrapy.Request(url='http://proview.caqh.org/Login',

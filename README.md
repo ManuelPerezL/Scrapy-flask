@@ -11,3 +11,7 @@ scrapy crawl datasummary
 ```
 scrapy crawl datasummary -o output.json -t json
 ```
+### Run  and output scrapped data to json file from flask 
+```
+python3 app.py 
+```
