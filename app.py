@@ -43,7 +43,7 @@ def scrape_with_crochet(baseURL):
 def _crawler_result(item, response, spider):
    output_data.append(dict(item))
    s = json.dumps(output_data)
-   open("outpu.json","w").write(s)
+   open("output.json","w").write(s)
    
 
 
